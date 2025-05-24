@@ -1,5 +1,5 @@
 package cl.maotech.course_service.repository;
 
-public class CourseRepository {
-    
+public interface CourseRepository {
+
 }
