@@ -43,6 +43,20 @@ public class CourseService {
         courseRepository.deleteById(id);
     }
     
-    
+    /*Actualiza completamente curso */
+    public Course updateCourse(Long id, Course course) {
+        if (courseRepository.existsById(id)) {
+            course.setId(id);
+            return courseRepository.save(course);
+        }
+        
+        return null;
+
+    } 
+
+    /*Busca curso por nombre */
+    public List<Course> buscarCursoPorNombreNative(String nombre) {
+        return courseRepository.findByNombreNative(nombre);
+    }
 
 }
