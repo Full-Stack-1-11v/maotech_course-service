@@ -45,10 +45,12 @@ public class Course {
     @Column(nullable = false)
     private Integer capacidadMaxima;
     
-    // Relación con instructor
+    // Relación con instructor FK a instructor
     @Column(name = "instructor_id")
     private Long instructorId;
-    
+
+    // Relacion con categoria FK a Category
+    // CategoryId
     @CreationTimestamp
     private LocalDateTime fechaCreacion;
     
